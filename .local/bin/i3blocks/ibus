@@ -1,0 +1,27 @@
+#!/bin/bash
+
+case "$BLOCK_BUTTON" in
+    1) ~/.scripts/ibus-toggle ;;
+    3) ~/.scripts/ibus-toggle ;;
+esac
+
+ENGINE=$(ibus engine)
+if [[ -z "$ENGINE" ]]; then
+    echo "⌨"
+fi
+
+case "$ENGINE" in
+    xkb:us::eng)
+        echo "⌨ ENG"
+        echo ""
+        echo "#195466"
+        ;;
+    Bamboo)
+        echo "⌨ VIE"
+        echo ""
+        echo "#c33027"
+        ;;
+    *)
+        echo "⌨ $ENGINE"
+        echo ""
+esac

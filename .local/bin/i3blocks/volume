@@ -1,0 +1,28 @@
+#!/bin/bash
+
+AUDIO_DELTA=${AUDIO_DELTA:-2}
+
+DEFAULT_COLOR="#98d1ce"
+MUTED_COLOR="#195466"
+
+case "$BLOCK_BUTTON" in
+    3) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+    4) pactl set-sink-volume @DEFAULT_SINK@ +$AUDIO_DELTA% ;;
+    5) pactl set-sink-volume @DEFAULT_SINK@ -$AUDIO_DELTA% ;;
+esac
+
+MUTED=$(pamixer --get-mute)
+
+if [[ $MUTED == "false" ]] ; then
+    COLOR=$DEFAULT_COLOR
+else
+    COLOR=$MUTED_COLOR
+fi
+
+volume=$(pamixer --get-volume)
+current_sink=$(pacmd list-sinks | grep index: | grep -no '*' | grep -o '^[0-9]\+')
+if [[ $current_sink != "" ]]; then
+    echo " ${volume}%"
+    echo ""
+    echo "$COLOR"
+fi

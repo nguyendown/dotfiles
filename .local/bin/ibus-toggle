@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ENG="xkb:us::eng"
+VIE="Bamboo"
+
+ENGINE=$(ibus engine)
+if [[ -z "$ENGINE" ]]; then
+    ibus-daemon -d
+    ibus-engine "$ENG"
+fi
+
+case "$ENGINE" in
+    "$ENG")
+        ibus engine "$VIE" ;;
+    "$VIE")
+        ibus engine "$ENG" ;;
+esac

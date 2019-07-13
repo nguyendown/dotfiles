@@ -1,0 +1,13 @@
+[Default Applications]
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+application/pdf=zathura.desktop
+inode/directory=pcmanfm.desktop
+x-scheme-handler/mailto=chromium.desktop
+
+[Added Associations]
+image/png=feh.desktop;
+image/jpeg=geeqie.desktop;eom.desktop;eog.desktop;mupdf.desktop;feh.desktop;

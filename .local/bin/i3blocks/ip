@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [[ -n $BLOCK_INSTANCE ]]; then
+  IF=$BLOCK_INSTANCE
+else
+  IF=$(ip route | awk '/^default/ { print $5 ; exit }')
+fi
+
+IF=$(ip route | awk '/^default/ { print $5 ; exit }')
+if [[ -n $IF ]]; then
+    SSID=$(iwgetid -r)
+    case $1 in
+        -4)
+            AF=inet ;;
+        -6)
+            AF=inet6 ;;
+        *)
+            AF=inet6? ;;
+    esac
+
+    IPADDR=$(ip addr show $IF | perl -n -e "/$AF ([^\/]+).* scope global/ && print \$1 and exit")
+
+    if [[ "${SSID}" == "" ]]; then
+	    status=""
+    else
+	    status=" ${SSID}"
+    fi
+
+    echo "$status $IPADDR"
+fi
+

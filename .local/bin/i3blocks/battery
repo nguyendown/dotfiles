@@ -1,0 +1,34 @@
+#!/bin/bash
+
+COLOR="#98d1ce"
+CHARGING_COLOR="#26a98b"
+RED="#c23127"
+
+BATTERY=${BLOCK_INSTANCE:-1}
+BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
+BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging\|Not charging")
+BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+
+if [[ "${BATTERY_STATE}" = "Charging" || "${BATTERY_STATE}" = "Not charging" ]]; then
+    COLOR=$CHARGING_COLOR
+elif [[ $BATTERY_POWER -le 10 ]]; then
+    COLOR=$RED
+fi
+
+if [[ $BATTERY_POWER -gt 0 ]]; then
+    if [[ $BATTERY_POWER -le 10 ]]; then
+	STATUS=" ${BATTERY_POWER}%"
+    elif [[ $BATTERY_POWER -le 30 ]]; then
+	STATUS=" ${BATTERY_POWER}%"
+    elif [[ $BATTERY_POWER -le 60 ]]; then
+	STATUS=" ${BATTERY_POWER}%"
+    elif [[ $BATTERY_POWER -le 80 ]]; then
+	STATUS=" ${BATTERY_POWER}%"
+    elif [[ $BATTERY_POWER -le 100 ]]; then
+	STATUS=" ${BATTERY_POWER}%"
+    fi
+fi
+
+echo "$STATUS"
+echo ""
+echo "$COLOR"

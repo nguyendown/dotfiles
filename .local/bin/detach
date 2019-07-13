@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == "detach" ]] || [[ $1 == "attach" ]] && [[ -n $3 ]]; then
+    echo $(date)
+else
+    echo '$1 $2 $3'
+    exit 1
+fi    
+
+echo $1 $2 $3
+
+virsh -c qemu:///system ${1}-device win10 /dev/stdin <<EOF
+<hostdev mode='subsystem' type='usb' managed='yes'>
+  <source>
+    <vendor id='0x${2}'/>
+    <product id='0x${3}'/>
+  </source>
+</hostdev>
+EOF

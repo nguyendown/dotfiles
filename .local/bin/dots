@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+    echo "dots backup|populate"
+    exit 1
+fi
+
+if [[ "$1" == "backup" ]]; then
+    src=$(cat "$HOME/.dots" | sed "s|^|$HOME/./|")
+    echo "$HOME/dots/"
+    grep "$HOME" $(echo "$src") --color
+    rsync -Rrtlvn --delete --files-from=/dev/stdin / "$HOME/dots/" < <(echo "$src")
+    read -p "[Y/n] " yn
+    if [[ "$yn" == "y" ]] || [[ "$yn" == "Y" ]]; then
+        rsync -Rrtl --delete --files-from=/dev/stdin / "$HOME/dots/" < <(echo "$src")
+    fi
+elif [[ "$1" == "populate" ]]; then
+    bak=$(cat "$HOME/dots/.dots" | sed "s|^|$HOME/dots/./|")
+    rsync -Rrtlvn --files-from=/dev/stdin / "$HOME/" < <(echo "$bak")
+    read -p "[Y/n] " yn
+    if [[ "$yn" == "y" ]] || [[ "$yn" == "Y" ]]; then
+        rsync -Rrtl --files-from=/dev/stdin / "$HOME/" < <(echo "$bak")
+    fi
+fi
+

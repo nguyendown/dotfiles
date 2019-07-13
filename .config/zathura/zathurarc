@@ -1,0 +1,28 @@
+set completion-bg "#000000"
+set completion-fg "#98d1ce"
+set completion-group-bg "#091f2e"
+set completion-group-fg "#98d1ce"
+set completion-highlight-bg "#195465"
+set completion-highlight-fg "#d3ebe9"
+
+set guioptions n
+
+set inputbar-bg "#091f2e"
+set inputbar-fg "#98d1ce"
+set notification-bg "#091f2e"
+set notification-fg "#98d1ce"
+set notification-error-bg "#091f2e"
+set notification-error-fg "#98d1ce"
+set notification-warning-bg "#091f2e"
+set notification-warning-fg "#98d1ce"
+
+set selection-clipboard clipboard
+set selection-notification false
+set recolor
+set recolor-darkcolor "#98d1ce"
+set recolor-lightcolor "#000000"
+
+unmap q
+
+map <C-v> scroll full-down
+map <A-v> scroll full-up

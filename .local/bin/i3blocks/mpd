@@ -1,0 +1,25 @@
+#!/bin/sh
+
+case "$BLOCK_BUTTON" in
+    1) mpc next >> /dev/null ;;
+    2) mpc stop >> /dev/null ;;
+    3) mpc toggle >> /dev/null ;;
+esac
+
+COLOR="#98d1ce"
+CURRENT=$(mpc current)
+PLAYING=$(mpc | grep -o playing)
+SYMBOL=""
+
+
+if [[ -z $PLAYING ]]; then
+    SYMBOL=""
+fi
+
+DATA="${SYMBOL}  ${CURRENT}"
+
+if [[ -z $CURRENT ]]; then
+    echo ""
+else
+    echo "$DATA"
+fi

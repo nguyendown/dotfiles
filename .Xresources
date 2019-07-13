@@ -1,0 +1,63 @@
+Xft.dpi: 96
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle: hintmedium
+Xft.antialias: true
+Xft.rgba: none
+
+Emacs.font: Monospace:pixelsize=18
+Emacs.FontBackend: xft
+
+URxvt.font:		xft:Monospace:pixelsize=18,xft:Symbola,xft:Noto Emoji:minspace=False
+URxvt.letterSpace:	0
+URxvt.externalBorder:	0
+URxvt.scrollBar:	false
+URxvt.iso14755:		false
+URxvt.iso14755_52:	false
+
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+*.foreground:   #98d1ce
+*.background:   #000000
+*.cursorColor:  #98d1ce
+
+! brightblack
+*.color0:       #000000
+! black
+*.color8:       #000000
+
+! red
+*.color1:       #c33027
+! brightred
+*.color9:       #c33027
+
+! green
+*.color2:       #26a98b
+! brightgreen
+*.color10:      #26a98b
+
+! yellow
+*.color3:       #edb54b
+! brightyellow
+*.color11:      #edb54b
+
+! blue
+*.color4:       #093748
+! brightblue
+*.color12:      #195465
+
+! magenta
+*.color5:       #9a7ec4
+! brightmagenta
+*.color13:      #9a7ec4
+
+! cyan
+*.color6:       #33859d
+! brightcyan
+*.color14:      #33859d
+
+! white
+*.color7:       #98d1ce
+! brightwhite
+*.color15:      #98d1ce
