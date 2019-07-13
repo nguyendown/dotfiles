@@ -6,7 +6,7 @@ VIE="Bamboo"
 ENGINE=$(ibus engine)
 if [[ -z "$ENGINE" ]]; then
     ibus-daemon -d
-    ibus-engine "$ENG"
+    ibus engine "$ENG"
 fi
 
 case "$ENGINE" in
