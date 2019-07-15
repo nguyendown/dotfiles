@@ -125,6 +125,7 @@ nginx
 mariadb
 php
 nodejs
+ruby
 samba
 smbclient
 docker-compose
