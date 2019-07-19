@@ -118,3 +118,6 @@
                               (indent-according-to-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
+
+(global-unset-key (kbd "C-w"))
+(global-set-key (kbd "C-w") 'backward-kill-word)
