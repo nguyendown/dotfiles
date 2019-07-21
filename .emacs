@@ -1,6 +1,7 @@
 (server-start)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 
 (custom-set-variables
@@ -13,9 +14,7 @@
  '(custom-safe-themes
    (quote
     ("c8cc66aa4576b6f9c70fc703e4852746741e7a9f2ec11850eb7c91a2cfcf6ce0" "01f042d2580d65d72957cf3b21ec1682f58bc457f0e7e898be6c36dbe3b82452" "5b20570781c33819c0b4bcb009305dbe5a9ed12fcedca10e29f1703b5b9d3f96" default)))
- '(package-selected-packages
-   (quote
-    (eyebrowse markdown-mode ## sed-mode rainbow-mode auctex))))
+ '(package-selected-packages (quote (auctex eyebrowse markdown-mode ##))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,6 +41,7 @@
 
 (column-number-mode)
 
+(global-unset-key (kbd "C-h"))
 (global-set-key [?\C-h] 'delete-backward-char)
 
 (global-display-line-numbers-mode)
@@ -120,4 +120,8 @@
 (add-to-list 'auto-mode-alist '("\\.\\(asm\\|s\\)$" . nasm-mode))
 
 (global-unset-key (kbd "C-w"))
-(global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-w")(lambda ()
+                             (interactive)
+                             (if (use-region-p)
+                                 (kill-region (region-beginning) (region-end))
+                               (backward-kill-word 1))))
