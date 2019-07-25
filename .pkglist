@@ -94,6 +94,7 @@ python-docs
 python-pip
 python2-pip
 python-pexpect
+python-sympy
 openbsd-netcat
 lftp
 mc
