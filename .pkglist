@@ -95,6 +95,7 @@ python-pip
 python2-pip
 python-pexpect
 python-sympy
+python-gmpy2
 openbsd-netcat
 lftp
 mc
