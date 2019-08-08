@@ -44,7 +44,7 @@
 (global-unset-key (kbd "C-h"))
 (global-set-key [?\C-h] 'delete-backward-char)
 
-(global-display-line-numbers-mode)
+;;(global-display-line-numbers-mode)
 
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 (load-theme 'gotham t)
