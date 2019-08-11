@@ -1,19 +1,8 @@
-#!/bin/bash
-
-i3lock -i ~/.bg/lockscreen.png -eu -c 000000
-#i3lock -i ~/.bg/archlinux.png -eu -c 000000
-
-# In five seconds, turn off display unless key press in last 4 seconds
-exited=0
-while [ $exited -eq 0 ]
-do
-	sleep 5
-	if [[ 10000 -lt $(xssstate -i) ]]
-	then
-		pgrep -x i3lock && xset dpms force off 
-	fi
-	if [[ ! $(pgrep -x i3lock) ]]
-	then
-		exited=1
-	fi
-done
+#!/bin/sh
+revert() {
+    xset dpms 0 0 0
+}
+trap revert HUP INT TERM
+xset +dpms dpms 5 5 5
+i3lock -n -i ~/.bg/lockscreen.png -eu -c 000000
+revert
