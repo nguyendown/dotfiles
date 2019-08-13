@@ -18,6 +18,9 @@ alias bc='bc -ql'
 alias pdflatex='pdflatex -interaction=nonstopmode'
 alias xelatex='xelatex -interaction=nonstopmode'
 alias mysql='mysql --sigint-ignore'
+alias neww='tmux neww'
+alias newww='tmux neww && tmux neww'
+alias newwww='tmux neww && tmux neww && tmux neww'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
