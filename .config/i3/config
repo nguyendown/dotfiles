@@ -194,8 +194,8 @@ new_float pixel 0
 exec --no-startup-id emacs
 
 # i3lock
-bindsym $mod+Shift+Escape exec --no-startup-id bash ~/.local/bin/lockscreen
-exec --no-startup-id bash ~/.local/bin/lockscreen
+bindsym $mod+Shift+Escape exec --no-startup-id loginctl lock-session $XDG_SESSION_ID
+exec --no-startup-id loginctl lock-session $XDG_SESSION_ID
 
 # xss-lock
 exec --no-startup-id xss-lock -q -l -- bash ~/.local/bin/lockscreen
@@ -227,8 +227,8 @@ bindsym XF86AudioNext exec --no-startup-id mpc next && pkill -RTMIN+1 i3blocks
 bindsym $mod+F7 exec --no-startup-id mpc toggle && pkill -RTMIN+1 i3blocks
 bindsym $mod+F8 exec --no-startup-id mpc next && pkill -RTMIN+1 i3blocks
 
-bindsym XF86Search exec "(~/.local/bin/detach detach 046d c084; ~/.local/bin/detach detach 04b4 0510) >> /tmp/detach.log 2>&1"
-bindsym XF86AudioPrev exec "(~/.local/bin/detach attach 046d c084; ~/.local/bin/detach attach 04b4 0510) >> /tmp/detach.log 2>&1"
+bindsym XF86Search exec "(~/.local/bin/detach detach 046d c084; ~/.local/bin/detach detach 04b4 0510; xset s on) >> /tmp/detach.log 2>&1"
+bindsym XF86AudioPrev exec "(~/.local/bin/detach attach 046d c084; ~/.local/bin/detach attach 04b4 0510; xset s off) >> /tmp/detach.log 2>&1"
 
 # xset
 #exec_always --no-startup-id xset r rate 150 50
