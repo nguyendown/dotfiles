@@ -1,12 +1,6 @@
 #!/bin/bash
 
-if [[ $1 == "detach" ]] || [[ $1 == "attach" ]] && [[ -n $3 ]]; then
-    echo $(date)
-else
-    echo '$1 $2 $3'
-    exit 1
-fi    
-
+date
 echo $1 $2 $3
 
 virsh -c qemu:///system ${1}-device win10 /dev/stdin <<EOF
