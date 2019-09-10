@@ -193,7 +193,7 @@ new_float pixel 0
 # i3lock
 exec --no-startup-id xss-lock -q -l -- bash ~/.local/bin/lockscreen
 bindsym $mod+Shift+Escape exec --no-startup-id loginctl lock-session $XDG_SESSION_ID
-exec --no-startup-id loginctl lock-session $XDG_SESSION_ID
+exec --no-startup-id bash ~/.local/bin/lockscreen
 
 # start up
 exec --no-startup-id emacs
