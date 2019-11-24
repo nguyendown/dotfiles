@@ -11,3 +11,4 @@ x-scheme-handler/mailto=chromium.desktop
 [Added Associations]
 image/png=feh.desktop;
 image/jpeg=geeqie.desktop;eom.desktop;eog.desktop;mupdf.desktop;feh.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
