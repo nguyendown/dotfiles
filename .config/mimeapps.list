@@ -12,3 +12,4 @@ x-scheme-handler/mailto=chromium.desktop
 image/png=feh.desktop;
 image/jpeg=geeqie.desktop;eom.desktop;eog.desktop;mupdf.desktop;feh.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/plain=org.gnome.gedit.desktop;

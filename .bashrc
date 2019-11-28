@@ -39,7 +39,7 @@ alias find='find_exclude_mnt'
 PATH="$PATH:$HOME/.local/bin"
 PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 PATH="$PATH:$HOME/Android/Sdk/tools"
-PS1='[\[\033[01;34m\]\u@\h\[\033[00m\] \w]\[\033[01;34m\]\$\[\033[00m\] '
+PS1='[\[\033[34m\]\u@\h\[\033[m\] \w]\[\033[34m\]\$\[\033[m\] '
 export EDITOR='emacsclient -a vim'
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'
