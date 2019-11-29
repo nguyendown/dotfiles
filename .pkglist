@@ -11,6 +11,8 @@ nm-connection-editor
 network-manager-applet
 wireless_tools
 base-devel
+man-db
+man-pages
 efibootmgr
 linux-headers
 xorg-server
@@ -115,8 +117,6 @@ jdk-openjdk
 openjdk-src
 openjdk-doc
 jdk8-openjdk
-openjdk8-src
-openjdk8-doc
 maven
 qemu
 ovmf
@@ -164,9 +164,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 audacity
-arduino
-arduino-docs
-arduino-avr-core
 transmission-cli
 transmission-remote-gtk
 cmatrix
+lolcat
