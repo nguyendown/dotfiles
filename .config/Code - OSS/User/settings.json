@@ -23,6 +23,7 @@
     "scm.diffDecorations" : "none",
     "workbench.tips.enabled": false,
     "emacs-mcx.debug.silent": true,
-    "emacs-mcx.strictEmacsMove": true
+    "emacs-mcx.strictEmacsMove": true,
+    "terminal.integrated.shellArgs.windows": ["-noexit", "-executionpolicy", "bypass", "-file", "C:\\User\\user\\profile.ps1"]
 }
 
