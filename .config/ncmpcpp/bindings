@@ -170,24 +170,24 @@ def_key "ctrl-n"
 #def_key "}"
 #  scroll_down_artist
 #
-#def_key "page_up"
-#  page_up
-#
-#def_key "page_down"
-#  page_down
-#
-#def_key "home"
-#  move_home
-#
-#def_key "end"
-#  move_end
-#
+def_key "alt-v"
+  page_up
+
+def_key "ctrl-v"
+  page_down
+
+def_key "alt-<"
+  move_home
+
+def_key "alt->"
+  move_end
+
 #def_key "insert"
 #  select_item
 #
-#def_key "enter"
-#  enter_directory
-#
+def_key "ctrl-f"
+  enter_directory
+
 #def_key "enter"
 #  toggle_output
 #
@@ -308,9 +308,9 @@ def_key "ctrl-b"
 #def_key "ctrl-h"
 #  replay_song
 #
-#def_key "backspace"
-#  jump_to_parent_directory
-#
+def_key "ctrl-b"
+  jump_to_parent_directory
+
 #def_key "backspace"
 #  replay_song
 #
@@ -383,15 +383,15 @@ def_key "ctrl-b"
 #def_key "/"
 #  find
 #
-#def_key "/"
-#  find_item_forward
-#
+def_key "ctrl-s"
+  find_item_forward
+
 #def_key "?"
 #  find
 #
-#def_key "?"
-#  find_item_backward
-#
+def_key "ctrl-r"
+  find_item_backward
+
 #def_key "."
 #  next_found_item
 #
