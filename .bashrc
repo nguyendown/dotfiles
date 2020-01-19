@@ -9,7 +9,6 @@ alias rm='false'
 alias ls='ls --color'
 alias ll='ls --color -l'
 alias grep='grep --color'
-alias emacs='emacsclient'
 alias java='unset _JAVA_OPTIONS; java'
 alias cal='cal -m'
 alias ssh='TERM=rxvt ssh'
@@ -41,7 +40,7 @@ PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 PATH="$PATH:$HOME/Android/Sdk/tools"
 PS1='[\[\033[34;1m\]\u@\h\[\033[m\] \w]\[\033[34;1m\]\$\[\033[m\] '
 export EDITOR='emacsclient -a vim'
-
+export XMODIFIERS=@im=ibus
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 # Disable Software Flow Control Ctrl-s
