@@ -59,6 +59,7 @@ pulseaudio
 pamixer
 pulsemixer
 pavucontrol
+pulseaudio-alsa
 arandr
 xssstate
 xss-lock
