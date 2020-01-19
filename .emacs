@@ -24,6 +24,8 @@
 
 (menu-bar-mode -1)
 
+(setq use-dialog-box nil)
+
 (setq inhibit-startup-screen t)
 
 (blink-cursor-mode 0)
@@ -71,15 +73,8 @@
 
 (setq ring-bell-function 'ignore)
 
-;;(add-hook 'prog-mode-hook
-;;          (lambda () (setq c-hungry-delete-key t)))
-
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
-
-;;(add-hook 'python-mode-hook
-;;		  (lambda ()
-;;            (setq indent-tabs-mode nil)))
 
 (defun move-line-up ()
   "Move up the current line."
@@ -113,11 +108,9 @@
 
 (global-unset-key (kbd "C-u"))
 (global-set-key (kbd "C-u")(lambda ()
-                              (interactive)
-                              (kill-line 0)
-                              (indent-according-to-mode)))
-
-(add-to-list 'auto-mode-alist '("\\.\\(s\\)$" . nasm-mode))
+                             (interactive)
+                             (kill-line 0)
+                             (indent-according-to-mode)))
 
 (global-unset-key (kbd "C-w"))
 (global-set-key (kbd "C-w")(lambda ()
@@ -125,3 +118,22 @@
                              (if (use-region-p)
                                  (kill-region (region-beginning) (region-end))
                                (backward-kill-word 1))))
+
+(defun my-asm-mode-hook ()
+  (electric-indent-local-mode -1)
+  (local-unset-key (vector asm-comment-char))
+  (define-key asm-mode-map (kbd "RET") #'newline-and-indent)
+  (setq tab-always-indent (default-value 'tab-always-indent))
+  (defun asm-colon ()
+    "Insert a colon; if it follows a label, delete the label's indentation."
+    (interactive)
+    (let ((labelp nil))
+      (save-excursion
+        (skip-syntax-backward "w_")
+        (skip-syntax-backward " ")
+        (if (setq labelp (bolp)) (delete-horizontal-space)))
+      (call-interactively 'self-insert-command)
+      (when labelp
+        (delete-horizontal-space)))))
+
+(add-hook 'asm-mode-hook #'my-asm-mode-hook)
