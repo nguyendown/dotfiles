@@ -28,7 +28,7 @@ URxvt.perl-ext-common:
 ! brightblack
 *.color0:       #000000
 ! black
-*.color8:       #000000
+*.color8:       #4c6967
 
 ! red
 *.color1:       #c33027
