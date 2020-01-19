@@ -3,5 +3,54 @@
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+x c",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+x n",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+x p",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+x n",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+x p",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.moveLinesDownAction"
+    },
+    {
+        "key": "alt+p",
+        "command": "editor.action.moveLinesUpAction"
+    },
+    {
+        "key": "alt+/",
+        "command": "editor.action.triggerSuggest"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight"
+    },
+    {
+        "key": "ctrl+x ctrl+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "ctrl+x ctrl+k",
+        "command": "-workbench.action.closeAllEditors"
     }
 ]

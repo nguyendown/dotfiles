@@ -1,5 +1,5 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
     "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true,
     "editor.minimap.enabled": false,
@@ -24,6 +24,7 @@
     "workbench.tips.enabled": false,
     "emacs-mcx.debug.silent": true,
     "emacs-mcx.strictEmacsMove": true,
-    "terminal.integrated.shellArgs.windows": ["-noexit", "-executionpolicy", "bypass", "-file", "C:\\User\\user\\profile.ps1"]
+    "window.openWithoutArgumentsInNewWindow": "off",
+    "window.zoomLevel": 0,
+    "editor.snippetSuggestions": "none"
 }
-
