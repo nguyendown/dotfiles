@@ -150,7 +150,7 @@ bar {
     tray_output none
 	status_command i3blocks
 	separator_symbol " "
-	height 16
+	height 14
 	# Bind
 	bindsym button4 exec pactl set-sink-volume @DEFAULT_SINK@ +2% && pkill -RTMIN+1 i3blocks
 	bindsym button5 exec pactl set-sink-volume @DEFAULT_SINK@ -2% && pkill -RTMIN+1 i3blocks
@@ -159,12 +159,12 @@ bar {
 		background #000000
 		statusline #98d1ce
 		
-            focused_workspace  #98d1ce #091f2e #98d1ce
-            active_workspace   #98d1ce #091f2e #599cab
-            inactive_workspace #195466 #000000 #195466
-	        urgent_workspace   #245361 #000000 #245361
-	        binding_mode       #245361 #000000 #245361
-	}
+        focused_workspace  #000000 #000000 #98d1ce
+        active_workspace   #000000 #000000 #98d1ce
+        inactive_workspace #000000 #000000 #195466
+        urgent_workspace   #000000 #000000 #245361
+        binding_mode       #000000 #000000 #245361
+    }
 }
 
 # class                 borde text    indicator child_border
@@ -196,15 +196,14 @@ bindsym $mod+Shift+Escape exec --no-startup-id loginctl lock-session $XDG_SESSIO
 exec --no-startup-id bash ~/.local/bin/lockscreen
 
 # start up
-exec --no-startup-id emacs
+#exec --no-startup-id emacs
 
 #exec_always --no-startup-id feh --bg-scale ~/.bg/bg.jpg
 exec --no-startup-id hsetroot -solid "#000000"
 #exec --no-startup-id compton
 exec --no-startup-id urxvtd -q -f -o
 exec --no-startup-id dunst
-exec --no-startup-id unclutter --timeout 20
-exec --no-startup-id ibus-daemon -d && ibus engine xkb:us::eng
+exec --no-startup-id ibus-daemon -drx && ibus engine xkb:us::eng
 
 bindsym Mod1+backslash exec --no-startup-id ~/.local/bin/ibus-toggle && pkill -RTMIN+1 i3blocks
 
@@ -245,7 +244,7 @@ bindsym Shift+Print exec --no-startup-id maim -s | xclip -selection clipboard -t
 #bindsym $mod+Shift+Return exec --no-startup-id alacritty -d 60 15
 
 # Float
-bindsym $mod+Shift+Return exec --no-startup-id urxvt -geometry 80x25 -name "floating_urxvt" -fn "xft:Dina:pixelsize=6:antialias=false" -fb "xft:Dina:pixelsize=6:antialias=false"
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -geometry 80x25 -name "floating_urxvt" -fn "xft:Dina:style=Regular:pixelsize=10:antialias=false" -fb "xft:Dina:style=Bold:pixelsize=10:antialias=false"
 
 for_window [window_role="pop-up"] floating toggle
 for_window [window_role="GtkFileChooserDialog"] floating enable

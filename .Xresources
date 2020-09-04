@@ -5,8 +5,10 @@ Xft.hintstyle: hintmedium
 Xft.antialias: true
 Xft.rgba: none
 
-Emacs.font: Monospace
+Emacs.font: Dina:pixelsize=10
+!Emacs.font: Monospace
 Emacs.FontBackend: xft
+Emacs.useXIM: on
 
 URxvt.font:           xft:Monospace,xft:Symbola,xft:Noto Emoji:minspace=False
 URxvt.saveLines:      200
@@ -46,7 +48,8 @@ URxvt.perl-ext-common:
 *.color11:      #edb54b
 
 ! blue
-*.color4:       #093748
+!*.color4:       #093748
+*.color4:       #195465
 ! brightblue
 *.color12:      #195465
 
