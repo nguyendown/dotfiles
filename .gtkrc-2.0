@@ -1,7 +1,0 @@
-gtk-theme-name = "deepin-dark"
-gtk-key-theme-name = "Emacs"
-gtk-toolbar-style = "GTK_TOOLBAR_TEXT"
-gtk-button-images=0
-gtk-menu-images=0
-gtk-enable-event-sounds=0
-gtk-enable-input-feedback-sounds=0

@@ -23,6 +23,9 @@ set recolor-darkcolor "#98d1ce"
 set recolor-lightcolor "#000000"
 
 unmap q
+unmap space
 
 map <C-v> scroll full-down
 map <A-v> scroll full-up
+map <space> scroll full-down
+map <S-space> scroll full-up
