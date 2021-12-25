@@ -1,15 +1,42 @@
 [Default Applications]
-text/html=chromium.desktop
-x-scheme-handler/http=chromium.desktop
-x-scheme-handler/https=chromium.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
 application/pdf=zathura.desktop
 inode/directory=pcmanfm.desktop
-x-scheme-handler/mailto=chromium.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-WHBLT0.desktop
+x-scheme-handler/webcal=chromium.desktop
+message/rfc822=userapp-Thunderbird-WHBLT0.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-4415V0.desktop
 
 [Added Associations]
-image/png=feh.desktop;
+image/png=gimp.desktop;feh.desktop;geeqie.desktop;
 image/jpeg=geeqie.desktop;eom.desktop;eog.desktop;mupdf.desktop;feh.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
 text/plain=org.gnome.gedit.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-WHBLT0.desktop;
+message/rfc822=userapp-Thunderbird-WHBLT0.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-4415V0.desktop;
+audio/flac=mpv.desktop;
+image/webp=feh.desktop;

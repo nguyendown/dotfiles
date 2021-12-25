@@ -12,9 +12,9 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-safe-themes
-   (quote
-    ("c8cc66aa4576b6f9c70fc703e4852746741e7a9f2ec11850eb7c91a2cfcf6ce0" "01f042d2580d65d72957cf3b21ec1682f58bc457f0e7e898be6c36dbe3b82452" "5b20570781c33819c0b4bcb009305dbe5a9ed12fcedca10e29f1703b5b9d3f96" default)))
- '(package-selected-packages (quote (org auctex eyebrowse markdown-mode ##))))
+   '("c8cc66aa4576b6f9c70fc703e4852746741e7a9f2ec11850eb7c91a2cfcf6ce0" "01f042d2580d65d72957cf3b21ec1682f58bc457f0e7e898be6c36dbe3b82452" "5b20570781c33819c0b4bcb009305dbe5a9ed12fcedca10e29f1703b5b9d3f96" default))
+ '(package-selected-packages
+   '(typescript-mode prettier-js so-long go-mode org auctex eyebrowse markdown-mode ##)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,7 +69,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80))
-(setq-default c-basic-offset 4)
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 (setq ring-bell-function 'ignore)
 
@@ -137,3 +138,14 @@
         (delete-horizontal-space)))))
 
 (add-hook 'asm-mode-hook #'my-asm-mode-hook)
+
+;; JS
+
+(global-so-long-mode 1)
+
+(setq js-indent-level 2)
+
+(require 'prettier-js)
+
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook 'prettier-js-mode)

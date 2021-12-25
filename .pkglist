@@ -1,3 +1,7 @@
+base
+base-devel
+linux
+linux-lts
 acpi
 xf86-video-intel
 intel-media-driver
@@ -10,7 +14,6 @@ networkmanager-openvpn
 nm-connection-editor
 network-manager-applet
 wireless_tools
-base-devel
 man-db
 man-pages
 efibootmgr
@@ -23,6 +26,7 @@ xorg-xprop
 nfs-utils
 ntfs-3g
 dosfstools
+sshfs
 lib32-glibc
 lib32-gcc-libs
 openssh

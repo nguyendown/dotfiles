@@ -1,6 +1,5 @@
 #!/bin/bash
 
-date
 echo $1 $2 $3
 
 virsh -c qemu:///system ${1}-device win10 /dev/stdin <<EOF

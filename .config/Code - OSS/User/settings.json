@@ -1,16 +1,20 @@
 {
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "window.menuBarVisibility": "hidden",
+    "emacs-mcx.debug.silent": true,
+    "emacs-mcx.strictEmacsMove": true,
+    "workbench.startupEditor": "newUntitledFile",
+/*
     "workbench.startupEditor": "none",
     "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
-    "editor.cursorBlinking": "solid",
-    "editor.cursorStyle": "block",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "editor.suggest.showWords": false,
-    "window.menuBarVisibility": "hidden",
     "workbench.statusBar.visible": true,
     "git.enableSmartCommit": true,
     "editor.dragAndDrop": false,
@@ -22,9 +26,8 @@
     "editor.folding": false,
     "scm.diffDecorations" : "none",
     "workbench.tips.enabled": false,
-    "emacs-mcx.debug.silent": true,
-    "emacs-mcx.strictEmacsMove": true,
     "window.openWithoutArgumentsInNewWindow": "off",
     "window.zoomLevel": 0,
     "editor.snippetSuggestions": "none"
+ */
 }

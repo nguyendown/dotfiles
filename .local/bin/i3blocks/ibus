@@ -12,12 +12,12 @@ fi
 
 case "$ENGINE" in
     xkb:us::eng)
-        echo "⌨ ENG"
+        echo "⌨ EN"
         echo ""
         echo "#195466"
         ;;
     Bamboo)
-        echo "⌨ VIE"
+        echo "⌨ VI"
         echo ""
         echo "#c33027"
         ;;

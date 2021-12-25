@@ -5,10 +5,10 @@ Xft.hintstyle: hintmedium
 Xft.antialias: true
 Xft.rgba: none
 
-Emacs.font: Dina:pixelsize=10
-!Emacs.font: Monospace
+Emacs.font: Monospace
+!Emacs.font: Dina:pixelsize=10
 Emacs.FontBackend: xft
-Emacs.useXIM: on
+Emacs*useXIM: true
 
 URxvt.font:           xft:Monospace,xft:Symbola,xft:Noto Emoji:minspace=False
 URxvt.saveLines:      200
@@ -22,6 +22,8 @@ URxvt.iso14755_52:    false
 
 URxvt.perl-ext:
 URxvt.perl-ext-common:
+
+Xcursor.theme: cross
 
 *.foreground:   #98d1ce
 *.background:   #000000

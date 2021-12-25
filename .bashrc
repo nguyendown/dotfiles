@@ -21,6 +21,7 @@ alias neww='tmux neww'
 alias newww='tmux neww && tmux neww'
 alias newwww='tmux neww && tmux neww && tmux neww'
 alias hackerman='cmatrix'
+alias ytdl='youtube-dl -i -o "%(upload_date)s %(title)s-%(uploader)s-%(id)s.%(ext)s"'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
